@@ -1,5 +1,14 @@
-import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
-import { AppModule } from './app/app.module';
+import { provideRouter } from '@angular/router';
+import { AppComponent } from './app/app.component';
+import { bootstrapApplication } from '@angular/platform-browser';
 
-platformBrowserDynamic().bootstrapModule(AppModule)
+bootstrapApplication(AppComponent, {
+  providers: [
+    provideRouter([
+      { path: '', redirectTo: 'json', pathMatch: 'full' },
+      { path: 'json', loadComponent: () => import('./app/json-tool/json-tool.component').then(m => m.JsonToolComponent) },
+      { path: 'timestamp', loadComponent: () => import('./app/timestamp-tool/timestamp-tool.component').then(m => m.TimestampToolComponent) }
+    ])
+  ]
+})
   .catch(err => console.error(err));

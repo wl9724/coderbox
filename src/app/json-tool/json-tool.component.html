@@ -1,0 +1,13 @@
+<h2>🧾 JSON 转换</h2>
+
+<nz-input-group nzAddOnBefore="输入 JSON">
+  <textarea nz-input [(ngModel)]="inputJson" rows="6"></textarea>
+</nz-input-group>
+
+<div style="margin-top: 12px;">
+  <button nz-button nzType="primary" (click)="formatJson()">格式化</button>
+</div>
+
+<nz-input-group nzAddOnBefore="输出结果" style="margin-top: 12px;">
+  <textarea nz-input [(ngModel)]="outputJson" rows="6" readonly></textarea>
+</nz-input-group>

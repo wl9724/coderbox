@@ -1,0 +1,52 @@
+nz-layout {
+    min-height: 100vh;
+    background: #f0f2f5;
+}
+
+nz-header {
+    display: flex;
+    align-items: center;
+    padding: 0 24px;
+    height: 64px;
+    background: #001529;
+    box-shadow: 0 2px 8px #f0f1f2;
+}
+
+.logo {
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+    margin-right: 40px;
+    user-select: none;
+    cursor: default;
+    flex-shrink: 0;
+}
+
+ul[nz-menu] {
+    flex: 1;
+}
+
+ul[nz-menu]>li[nz-menu-item] {
+    padding: 0 24px;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+ul[nz-menu]>li[nz-menu-item]:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+ul[nz-menu]>li[nz-menu-item].ant-menu-item-selected {
+    background-color: #1890ff;
+    color: white;
+}
+
+nz-content {
+    padding: 24px;
+    max-width: 960px;
+    margin: 24px auto;
+    background: white;
+    border-radius: 8px;
+    min-height: 400px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
